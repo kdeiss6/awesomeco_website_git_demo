@@ -10,5 +10,44 @@
     <p>This is the first paragraph.</p>
     <p>Adding second paragraph.</p>
     <p>Adding third paragraph.</p>
+      <pre>
+      <script>
+        function debtToIncome(sumExpenses, income) {
+    var dtiRatio = (sumExpenses / income) * 100;
+    return dtiRatio;
+  }
+  
+  function finalJavaScript() {
+    var sumExpenses = 0;
+    var loopSection = true;
+    var expense = 0;
+    var income = 0;
+    var returnDtiRatio;
+    expense = Number(expense);
+    income = prompt("Please enter your gross monthly income.");
+    income = Number(income);
+    
+    
+  while (loopSection) {
+    expense = prompt("Enter one expense at a time than 0 to quit/move on.");
+    if (Number(expense) !== 0) {
+      document.write("Expense entered: " + expense + "\n");
+      sumExpenses += Number(expense);
+    } else {
+      document.write("Expense entered: " + expense + "\n");
+      loopSection = false;
+      } 
+  }
+    sumExpenses = Number(sumExpenses);
+    returnDtiRatio = Number(debtToIncome(sumExpenses, income));
+    document.write("Total expenses entered: " + sumExpenses.toFixed(2) + "\n");
+    document.write("Monthly income entered: " + income + "\n");
+    document.write("Your DTI (debt to income ratio) is " + returnDtiRatio.toFixed(2) + "%\n");
+    document.write("Any number below 36% is good. Anything above 50%, you should take action to fix.");
+  }
+
+  finalJavaScript();
+      </script>
+    </pre>
   </body>
 </html>
